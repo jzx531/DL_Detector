@@ -43,9 +43,25 @@ typedef struct{
     int deadlock;
 }task_graph;
 
+void init_graph();
+
 vertex_t* create_vertex(pair_t pair);
 
+void add_edge(pair_t u,pair_t v);
 
+int DFS(int idx);
+
+//判断某个定点是否有环
+int check_cycle(int idx);
+
+//检测死锁
+void detect_deadlock(void);
+
+//查找锁
+int search_lock(unsigned long int lock);
+
+//查找空锁位置
+int search_empty_lock(unsigned long int lock);
 
 #endif // DIAGRAPH_H
 

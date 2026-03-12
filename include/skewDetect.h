@@ -15,7 +15,7 @@ typedef int (*pthread_mutex_lock_t)(pthread_mutex_t *mtx);
 
 int init_hook(void);
 
-
+void start_check(void);
 
 #endif // SKEWDETECT_H
 
